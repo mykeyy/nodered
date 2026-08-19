@@ -1,0 +1,18 @@
+# Local Node.js output
+node_modules/
+*.log
+*.bak
+.env
+.env.*
+
+# Local Node-RED runtime data and credentials
+flows.json
+flows_cred.json
+flows_*.json
+settings.js
+
+# Local screenshots and generated archives
+outputs/
+*.zip
+*.sha256
+*.tgz

@@ -1,0 +1,34 @@
+:root {
+    --rp-base: #faf4ed;
+    --rp-surface: #fffaf3;
+    --rp-overlay: #f2e9de;
+    --rp-muted: #9893a5;
+    --rp-subtle: #797593;
+    --rp-text: #575279;
+    --rp-love: #b4637a;
+    --rp-gold: #ea9d34;
+    --rp-rose: #d7827e;
+    --rp-pine: #286983;
+    --rp-foam: #56949f;
+    --rp-iris: #907aa9;
+    --rp-highlight-low: #f4efe9;
+    --rp-highlight-med: #dfdad9;
+    --rp-highlight-high: #cecacd;
+    --rp-hover: #eee7de;
+    --rp-foam-bright: #73aeb5;
+    --rp-pine-hover: #4b8496;
+    --rp-pine-active: #215a6d;
+    --rp-node-label: #575279;
+    --rp-selected: #ede7df;
+    --rp-on-pine: #fffaf3;
+    --rp-on-foam: #fffaf3;
+    --rp-grid-color: rgba(152, 147, 165, 0.24);
+    --rp-grid-line: rgba(152, 147, 165, 0.2);
+    --rp-shade: rgba(87, 82, 121, 0.22);
+    --rp-shadow-soft: rgba(87, 82, 121, 0.14);
+    --rp-shadow-strong: rgba(87, 82, 121, 0.22);
+    --rp-iris-line: rgba(144, 122, 169, 0.28);
+    --rp-iris-border: rgba(144, 122, 169, 0.32);
+    --rp-foam-line: rgba(86, 148, 159, 0.18);
+    color-scheme: light;
+}

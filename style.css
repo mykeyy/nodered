@@ -1,0 +1,919 @@
+:root {
+    --rp-base: #191724;
+    --rp-surface: #1f1d2e;
+    --rp-overlay: #26233a;
+    --rp-muted: #6e6a86;
+    --rp-subtle: #908caa;
+    --rp-text: #e0def4;
+    --rp-love: #eb6f92;
+    --rp-gold: #f6c177;
+    --rp-rose: #ebbcba;
+    --rp-pine: #31748f;
+    --rp-foam: #9ccfd8;
+    --rp-iris: #c4a7e7;
+    --rp-highlight-low: #21202e;
+    --rp-highlight-med: #403d52;
+    --rp-highlight-high: #524f67;
+    --rp-hover: #302d46;
+    --rp-foam-bright: #b8e2e8;
+    --rp-pine-hover: #3b829c;
+    --rp-pine-active: #286278;
+    --rp-node-label: #191724;
+    --rp-selected: #332f49;
+    --rp-on-pine: #e0def4;
+    --rp-on-foam: #191724;
+    --rp-grid-color: rgba(110, 106, 134, 0.18);
+    --rp-grid-line: rgba(110, 106, 134, 0.13);
+    --rp-shade: rgba(25, 23, 36, 0.7);
+    --rp-shadow-soft: rgba(15, 12, 24, 0.18);
+    --rp-shadow-strong: rgba(15, 12, 24, 0.28);
+    --rp-iris-line: rgba(196, 167, 231, 0.26);
+    --rp-iris-border: rgba(196, 167, 231, 0.28);
+    --rp-foam-line: rgba(156, 207, 216, 0.12);
+
+    /* Node-RED's built-in design tokens. */
+    --red-ui-primary-background: var(--rp-base);
+    --red-ui-secondary-background: var(--rp-surface);
+    --red-ui-tertiary-background: var(--rp-overlay);
+    --red-ui-secondary-background-hover: var(--rp-hover);
+    --red-ui-secondary-background-selected: var(--rp-highlight-med);
+    --red-ui-list-item-background: var(--rp-surface);
+    --red-ui-list-item-background-hover: var(--rp-hover);
+    --red-ui-list-item-background-selected: var(--rp-highlight-med);
+    --red-ui-list-item-border-selected: var(--rp-iris);
+    --red-ui-list-item-color: var(--rp-text);
+    --red-ui-list-item-secondary-color: var(--rp-subtle);
+    --red-ui-primary-border-color: var(--rp-overlay);
+    --red-ui-secondary-border-color: var(--rp-muted);
+    --red-ui-tertiary-border-color: var(--rp-muted);
+    --red-ui-primary-color: var(--rp-text);
+    --red-ui-primary-text-color: var(--rp-text);
+    --red-ui-secondary-color: var(--rp-subtle);
+    --red-ui-secondary-text-color: var(--rp-subtle);
+    --red-ui-secondary-text-color-active: var(--rp-text);
+    --red-ui-secondary-text-color-hover: var(--rp-rose);
+    --red-ui-secondary-text-color-selected: var(--rp-rose);
+    --red-ui-secondary-text-color-focus: var(--rp-foam);
+    --red-ui-secondary-text-color-disabled: var(--rp-muted);
+    --red-ui-tertiary-text-color: var(--rp-muted);
+    --red-ui-form-background: var(--rp-surface);
+    --red-ui-form-input-background: var(--rp-overlay);
+    --red-ui-form-input-background-disabled: var(--rp-surface);
+    --red-ui-form-input-border-color: var(--rp-muted);
+    --red-ui-form-input-border-selected-color: var(--rp-foam);
+    --red-ui-form-input-focus-color: var(--rp-foam);
+    --red-ui-form-text-color: var(--rp-text);
+    --red-ui-form-text-color-disabled: var(--rp-muted);
+    --red-ui-form-placeholder-color: var(--rp-muted);
+    --red-ui-form-button-background: var(--rp-overlay);
+    --red-ui-header-background: var(--rp-surface);
+    --red-ui-header-text-color: var(--rp-text);
+    --red-ui-header-button-background: var(--rp-surface);
+    --red-ui-header-button-background-hover: var(--rp-hover);
+    --red-ui-header-button-background-active: var(--rp-highlight-med);
+    --red-ui-header-button-border: var(--rp-overlay);
+    --red-ui-header-menu-color: var(--rp-text);
+    --red-ui-header-menu-color-disabled: var(--rp-muted);
+    --red-ui-header-menu-heading-color: var(--rp-text);
+    --red-ui-header-menu-sublabel-color: var(--rp-subtle);
+    --red-ui-header-menu-background: var(--rp-surface);
+    --red-ui-header-menu-item-hover: var(--rp-hover);
+    --red-ui-tab-background: var(--rp-surface);
+    --red-ui-tab-background-active: var(--rp-overlay);
+    --red-ui-tab-background-hover: var(--rp-hover);
+    --red-ui-tab-text-color-active: var(--rp-rose);
+    --red-ui-tab-text-color-inactive: var(--rp-subtle);
+    --red-ui-palette-content-background: var(--rp-surface);
+    --red-ui-palette-header-background: var(--rp-overlay);
+    --red-ui-palette-header-color: var(--rp-text);
+    --red-ui-node-label-color: var(--rp-text);
+    --red-ui-node-background-placeholder: var(--rp-overlay);
+    --red-ui-node-border: var(--rp-muted);
+    --red-ui-node-icon-color: var(--rp-text);
+    --red-ui-node-port-background: var(--rp-foam);
+    --red-ui-node-port-background-hover: var(--rp-rose);
+    --red-ui-node-selected-color: var(--rp-rose);
+    --red-ui-port-selected-color: var(--rp-rose);
+    --red-ui-node-config-background: var(--rp-overlay);
+    --red-ui-icons-flow-color: var(--rp-foam);
+    --red-ui-spinner-color: var(--rp-iris);
+    --red-ui-link-color: var(--rp-foam);
+    --red-ui-link-link-color: var(--rp-foam);
+    --red-ui-menuBackground: var(--rp-surface);
+    --red-ui-menuColor: var(--rp-text);
+    --red-ui-menuHoverBackground: var(--rp-overlay);
+    --red-ui-menuHoverColor: var(--rp-rose);
+    --red-ui-popover-background: var(--rp-surface);
+    --red-ui-popover-color: var(--rp-text);
+    --red-ui-popover-border: var(--rp-overlay);
+    --red-ui-text-editor-background: var(--rp-base);
+    --red-ui-text-editor-color: var(--rp-text);
+    --red-ui-text-editor-active-line-background: var(--rp-surface);
+    --red-ui-text-editor-selection-background: var(--rp-overlay);
+    --red-ui-view-background: var(--rp-base);
+    --red-ui-view-grid-color: var(--rp-grid-color);
+    --red-ui-workspace-button-background: var(--rp-overlay);
+    --red-ui-workspace-button-background-hover: var(--rp-hover);
+    --red-ui-workspace-button-background-active: var(--rp-highlight-med);
+    --red-ui-workspace-button-background-selected: var(--rp-highlight-med);
+    --red-ui-workspace-button-border-selected: var(--rp-iris);
+    --red-ui-workspace-button-color: var(--rp-text);
+    --red-ui-workspace-button-color-hover: var(--rp-rose);
+    --red-ui-workspace-button-color-active: var(--rp-rose);
+    --red-ui-workspace-button-color-selected: var(--rp-text);
+    --red-ui-workspace-button-color-focus: var(--rp-foam);
+    --red-ui-workspace-button-color-focus-outline: var(--rp-iris);
+    --red-ui-workspace-button-background-primary: var(--rp-foam);
+    --red-ui-workspace-button-color-primary: var(--rp-on-foam);
+    --red-ui-workspace-button-background-primary-hover: var(--rp-foam-bright);
+    --red-ui-deploy-button-color: var(--rp-on-pine);
+    --red-ui-deploy-button-color-active: var(--rp-on-foam);
+    --red-ui-deploy-button-color-disabled: var(--rp-muted);
+    --red-ui-deploy-button-border-color: var(--rp-overlay);
+    --red-ui-deploy-button-background: var(--rp-pine);
+    --red-ui-deploy-button-background-hover: var(--rp-pine-hover);
+    --red-ui-deploy-button-background-active: var(--rp-pine-active);
+    --red-ui-deploy-button-background-disabled: var(--rp-overlay);
+    --red-ui-deploy-button-background-disabled-hover: var(--rp-surface);
+    --red-ui-tooltip-background: var(--rp-overlay);
+    --red-ui-tooltip-color: var(--rp-text);
+    --red-ui-debug-message-background: var(--rp-overlay);
+    --red-ui-debug-message-text-color: var(--rp-text);
+    --red-ui-scrollbar-handle-background: var(--rp-muted);
+    --red-ui-shade-color: var(--rp-shade);
+    color-scheme: dark;
+}
+
+html,
+body,
+#red-ui-main-container,
+#red-ui-workspace,
+#red-ui-workspace-chart,
+#red-ui-editor-stack {
+    background-color: var(--rp-base) !important;
+    color: var(--rp-text) !important;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    color: var(--rp-text) !important;
+}
+
+#red-ui-header {
+    background: var(--rp-surface) !important;
+    border-bottom: 1px solid var(--rp-overlay) !important;
+}
+
+#red-ui-header .red-ui-tab,
+#red-ui-header .red-ui-button,
+#red-ui-header a,
+#red-ui-header button {
+    color: var(--rp-text) !important;
+}
+
+#red-ui-header .red-ui-button:hover,
+#red-ui-header a:hover,
+#red-ui-header button:hover {
+    color: var(--rp-rose) !important;
+    background: var(--rp-overlay) !important;
+}
+
+#red-ui-header #red-ui-header-button-deploy:not(.disabled),
+#red-ui-header #red-ui-header-button-deploy-options:not(.disabled) {
+    color: var(--rp-on-pine) !important;
+    background: var(--rp-pine) !important;
+    border-color: var(--rp-pine) !important;
+}
+
+#red-ui-header #red-ui-header-button-deploy:not(.disabled):hover,
+#red-ui-header #red-ui-header-button-deploy-options:not(.disabled):hover {
+    color: var(--rp-on-foam) !important;
+    background: var(--rp-foam) !important;
+    border-color: var(--rp-foam) !important;
+}
+
+#red-ui-header #red-ui-header-button-deploy.disabled,
+#red-ui-header #red-ui-header-button-deploy.disabled + #red-ui-header-button-deploy-options {
+    color: var(--rp-muted) !important;
+    background: var(--rp-overlay) !important;
+    border-color: var(--rp-overlay) !important;
+}
+
+#red-ui-header #red-ui-header-button-deploy.disabled:hover,
+#red-ui-header #red-ui-header-button-deploy.disabled + #red-ui-header-button-deploy-options:hover {
+    color: var(--rp-subtle) !important;
+    background: var(--rp-surface) !important;
+    border-color: var(--rp-muted) !important;
+}
+
+#red-ui-sidebar,
+#red-ui-sidebar-left,
+#red-ui-sidebar-right,
+#red-ui-palette,
+#red-ui-sidebar-separator,
+#red-ui-sidebar-left-separator,
+#red-ui-sidebar-right-separator {
+    background: var(--rp-surface) !important;
+    border-color: var(--rp-overlay) !important;
+}
+
+#red-ui-palette-search,
+#red-ui-palette-search-input,
+#red-ui-sidebar input,
+#red-ui-sidebar select,
+#red-ui-sidebar textarea,
+.red-ui-dialog input,
+.red-ui-dialog select,
+.red-ui-dialog textarea {
+    background: var(--rp-overlay) !important;
+    color: var(--rp-text) !important;
+    border: 1px solid var(--rp-muted) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--rp-subtle) !important;
+}
+
+.red-ui-palette-header,
+.red-ui-sidebar-header,
+.red-ui-sidebar .red-ui-tabs,
+.red-ui-sidebar .red-ui-tab,
+.red-ui-sidebar .red-ui-tab.active {
+    background: var(--rp-surface) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-overlay) !important;
+}
+
+.red-ui-palette-header:hover,
+.red-ui-sidebar .red-ui-tab:hover,
+.red-ui-sidebar .red-ui-tab.active {
+    color: var(--rp-rose) !important;
+}
+
+.red-ui-palette-node {
+    background: var(--rp-overlay) !important;
+    color: var(--rp-text) !important;
+    border: 1px solid transparent !important;
+    box-shadow: none !important;
+}
+
+.red-ui-palette-node:hover {
+    background: var(--rp-hover) !important;
+    border-color: var(--rp-foam) !important;
+}
+
+.red-ui-palette-node-label,
+.red-ui-palette-node-icon,
+.red-ui-palette-node-container {
+    color: var(--rp-text) !important;
+}
+
+#red-ui-workspace-chart {
+    background-image:
+        linear-gradient(var(--rp-grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--rp-grid-line) 1px, transparent 1px) !important;
+}
+
+.red-ui-flow,
+.red-ui-workspace-chart,
+.red-ui-workspace-chart svg {
+    color: var(--rp-text) !important;
+}
+
+.red-ui-button,
+button,
+.red-ui-editor-button {
+    background: var(--rp-overlay) !important;
+    color: var(--rp-text) !important;
+    border: 1px solid var(--rp-muted) !important;
+}
+
+.red-ui-button:hover,
+button:hover,
+.red-ui-editor-button:hover {
+    background: var(--rp-hover) !important;
+    border-color: var(--rp-foam) !important;
+    color: var(--rp-rose) !important;
+}
+
+.red-ui-button i,
+.red-ui-button .fa,
+.red-ui-button .fa-icon {
+    color: inherit !important;
+}
+
+.red-ui-popover,
+.red-ui-menu,
+.red-ui-menu-dropdown,
+.red-ui-dialog,
+.red-ui-dialog-content,
+.red-ui-dialog-form,
+.red-ui-editor,
+.red-ui-editor-stack {
+    background: var(--rp-surface) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-overlay) !important;
+}
+
+.red-ui-dialog-header,
+.red-ui-dialog-footer,
+.red-ui-menu-header,
+.red-ui-menu-item {
+    background: var(--rp-overlay) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-muted) !important;
+}
+
+.red-ui-menu-item:hover,
+.red-ui-menu-item.selected,
+.red-ui-menu-item:focus {
+    background: var(--rp-pine) !important;
+    color: var(--rp-text) !important;
+}
+
+.red-ui-typedInput,
+.red-ui-typedInput-container,
+.red-ui-select-box,
+.red-ui-form-row input,
+.red-ui-form-row select,
+.red-ui-form-row textarea {
+    background: var(--rp-overlay) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-muted) !important;
+}
+
+.red-ui-info,
+.red-ui-sidebar-info,
+.red-ui-help,
+.red-ui-help-panel {
+    color: var(--rp-text) !important;
+    background: var(--rp-surface) !important;
+}
+
+a,
+.red-ui-link,
+.red-ui-help a {
+    color: var(--rp-foam) !important;
+}
+
+a:hover,
+.red-ui-link:hover,
+.red-ui-help a:hover {
+    color: var(--rp-rose) !important;
+}
+
+.red-ui-debug-msg,
+.red-ui-debug-msg-body,
+.red-ui-debug-msg-object {
+    background: var(--rp-overlay) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-muted) !important;
+}
+
+.red-ui-notification,
+.red-ui-alert,
+.ui-dialog,
+.ui-dialog-content,
+.ui-dialog-titlebar {
+    background: var(--rp-surface) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-overlay) !important;
+}
+
+.red-ui-tabs ul,
+.red-ui-tabs li,
+.red-ui-tabs a {
+    background: transparent !important;
+    color: var(--rp-subtle) !important;
+}
+
+.red-ui-tabs li.active a,
+.red-ui-tabs a:hover {
+    color: var(--rp-rose) !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--rp-base);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--rp-muted);
+    border-radius: 8px;
+    border: 2px solid var(--rp-base);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--rp-iris);
+}
+
+/* Contrast refinements for the Node-RED 5 editor layout. */
+#red-ui-main-container,
+#red-ui-sidebar-container,
+#red-ui-sidebar,
+#red-ui-palette,
+#red-ui-palette-editor,
+#red-ui-workspace,
+#red-ui-workspace-chart,
+#red-ui-workspace-footer,
+#red-ui-statusbar,
+.red-ui-sidebar,
+.red-ui-sidebar-left,
+.red-ui-sidebar-right,
+.red-ui-sidebar-content,
+.red-ui-sidebar-content-wrapper,
+.red-ui-sidebar-section,
+.red-ui-sidebar-info,
+.red-ui-sidebar-info-stack,
+.red-ui-palette-content,
+.red-ui-palette-scroll,
+.red-ui-palette-category,
+.red-ui-panel,
+.red-ui-panels {
+    background-color: var(--rp-base) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-overlay) !important;
+}
+
+#red-ui-sidebar-container,
+#red-ui-palette,
+#red-ui-palette-editor,
+.red-ui-sidebar-left,
+.red-ui-sidebar-right {
+    background-color: var(--rp-surface) !important;
+}
+
+#red-ui-palette .red-ui-palette-category,
+#red-ui-palette .red-ui-palette-header,
+#red-ui-palette .red-ui-palette-label,
+#red-ui-palette .red-ui-palette-module-header,
+#red-ui-palette .red-ui-palette-module-content {
+    background-color: var(--rp-surface) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-overlay) !important;
+}
+
+#red-ui-palette .red-ui-palette-node,
+#red-ui-palette .red-ui-palette-node * {
+    color: var(--rp-text) !important;
+    text-shadow: none !important;
+}
+
+#red-ui-palette .red-ui-palette-label,
+#red-ui-palette .red-ui-node-label,
+#red-ui-palette .red-ui-palette-node-label,
+#red-ui-palette .red-ui-palette-node-config,
+#red-ui-palette .red-ui-palette-node-config-type {
+    color: var(--rp-text) !important;
+}
+
+#red-ui-palette .red-ui-palette-node svg,
+#red-ui-palette .red-ui-palette-node path,
+#red-ui-palette .red-ui-palette-node i {
+    color: var(--rp-text) !important;
+    fill: currentColor !important;
+}
+
+#red-ui-header-tabs,
+#red-ui-header-tabs .red-ui-tab,
+#red-ui-header-tabs .red-ui-tab-label,
+#red-ui-workspace-tabs,
+#red-ui-workspace-tabs .red-ui-tab,
+#red-ui-workspace-tabs .red-ui-tab-label,
+.red-ui-flow-tab,
+.red-ui-flow-tab-label {
+    background: var(--rp-surface) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-overlay) !important;
+}
+
+#red-ui-header-tabs .red-ui-tab.active,
+#red-ui-workspace-tabs .red-ui-tab.active,
+.red-ui-flow-tab.active {
+    background: var(--rp-overlay) !important;
+    color: var(--rp-rose) !important;
+    box-shadow: inset 0 -2px 0 var(--rp-rose) !important;
+}
+
+#red-ui-header-tabs .red-ui-tab:hover,
+#red-ui-workspace-tabs .red-ui-tab:hover,
+.red-ui-flow-tab:hover {
+    background: var(--rp-hover) !important;
+    color: var(--rp-foam) !important;
+}
+
+#red-ui-sidebar-container .red-ui-sidebar-header,
+#red-ui-sidebar-container .red-ui-sidebar-header *,
+#red-ui-sidebar-container .red-ui-sidebar-tab-bar,
+#red-ui-sidebar-container .red-ui-sidebar-tab-bar * {
+    background-color: var(--rp-surface) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-overlay) !important;
+}
+
+#red-ui-sidebar-container .red-ui-sidebar-header input,
+#red-ui-sidebar-container .red-ui-sidebar-header select,
+#red-ui-palette-search input,
+#red-ui-palette-search-input {
+    background: var(--rp-overlay) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-muted) !important;
+}
+
+#red-ui-sidebar-container .red-ui-sidebar-info table,
+#red-ui-sidebar-container .red-ui-sidebar-info td,
+#red-ui-sidebar-container .red-ui-sidebar-info th,
+#red-ui-sidebar-container .red-ui-info-table,
+#red-ui-sidebar-container .red-ui-info-table * {
+    background: var(--rp-surface) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-overlay) !important;
+}
+
+#red-ui-sidebar-container .red-ui-sidebar-info tr:hover,
+#red-ui-sidebar-container .red-ui-info-outline-item:hover {
+    background: var(--rp-overlay) !important;
+}
+
+#red-ui-workspace-toolbar,
+#red-ui-workspace-toolbar *,
+#red-ui-workspace-footer,
+#red-ui-workspace-footer * {
+    background-color: var(--rp-surface) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-overlay) !important;
+}
+
+#red-ui-workspace-toolbar button:hover,
+#red-ui-workspace-footer button:hover {
+    background-color: var(--rp-overlay) !important;
+    color: var(--rp-rose) !important;
+}
+
+.red-ui-flow-node-label,
+.red-ui-flow-node-label-text,
+.red-ui-flow-port-label,
+.red-ui-flow-group-label {
+    color: var(--rp-text) !important;
+}
+
+/* Node-RED renders SVG labels with fill, so color alone is not enough here. */
+.red-ui-flow-node-label,
+.red-ui-flow-node-label-text {
+    fill: var(--rp-base) !important;
+    color: var(--rp-base) !important;
+    opacity: 1 !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    stroke: none !important;
+}
+
+#red-ui-workspace-chart .red-ui-flow-node-label,
+#red-ui-workspace-chart .red-ui-flow-node-label-text {
+    fill: var(--rp-node-label) !important;
+    color: var(--rp-node-label) !important;
+    opacity: 1 !important;
+}
+
+/* Keep labels readable across Node-RED's SVG variants, including comments. */
+#red-ui-workspace-chart text.red-ui-flow-node-label,
+#red-ui-workspace-chart text.red-ui-flow-node-label-text,
+#red-ui-workspace-chart .red-ui-flow-node-label-white,
+#red-ui-workspace-chart .red-ui-flow-node-label-italic,
+#red-ui-workspace-chart .node_label_italic {
+    fill: var(--rp-node-label) !important;
+    color: var(--rp-node-label) !important;
+    opacity: 1 !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+}
+
+/* Make broker health obvious in a screenshot. */
+#red-ui-workspace-chart .red-ui-flow-node-status-label {
+    fill: var(--rp-foam) !important;
+    color: var(--rp-foam) !important;
+    font-size: 10pt !important;
+    font-weight: 600 !important;
+}
+
+#red-ui-workspace-chart .red-ui-flow-node-status-background {
+    fill: var(--rp-base) !important;
+    fill-opacity: 0.95 !important;
+}
+
+#red-ui-workspace-chart .red-ui-flow-node-status-dot-green,
+#red-ui-workspace-chart .red-ui-flow-node-status-ring-green {
+    fill: var(--rp-foam) !important;
+    stroke: var(--rp-foam) !important;
+}
+
+/* Slightly brighter secondary text keeps the dark interface readable. */
+#red-ui-sidebar-container .red-ui-sidebar-info,
+#red-ui-sidebar-container .red-ui-sidebar-info * {
+    color: var(--rp-iris) !important;
+}
+
+#red-ui-workspace-chart > svg,
+#red-ui-workspace-chart svg.red-ui-flow,
+#red-ui-workspace-chart .red-ui-flow {
+    background-color: var(--rp-base) !important;
+}
+
+#red-ui-sidebar-container .red-ui-sidebar-content,
+#red-ui-sidebar-container .red-ui-sidebar-content-wrapper,
+#red-ui-sidebar-container .red-ui-sidebar-section,
+#red-ui-sidebar-container .red-ui-sidebar-info,
+#red-ui-sidebar-container .red-ui-sidebar-info-stack,
+#red-ui-sidebar-container .red-ui-info-outline,
+#red-ui-sidebar-container .red-ui-info-outline-item,
+#red-ui-sidebar-container .red-ui-info-table {
+    background-color: var(--rp-surface) !important;
+    color: var(--rp-text) !important;
+}
+
+#red-ui-sidebar-container .red-ui-sidebar-section-separator,
+#red-ui-sidebar-container .red-ui-panels-separator,
+#red-ui-sidebar-container .red-ui-sidebar-tab-bar {
+    background-color: var(--rp-overlay) !important;
+    border-color: var(--rp-muted) !important;
+}
+
+/* Rosé Pine palette: give each family an accent while keeping the cards dark. */
+#red-ui-palette-container-common,
+#red-ui-palette-container-input,
+#red-ui-palette-container-output {
+    --palette-accent: var(--rp-foam);
+}
+
+#red-ui-palette-container-function,
+#red-ui-palette-container-sequence {
+    --palette-accent: var(--rp-iris);
+}
+
+#red-ui-palette-container-network,
+#red-ui-palette-container-storage {
+    --palette-accent: var(--rp-pine);
+}
+
+#red-ui-palette-container-parser {
+    --palette-accent: var(--rp-gold);
+}
+
+#red-ui-palette-container-dashboard {
+    --palette-accent: var(--rp-love);
+}
+
+#red-ui-palette-container-common .red-ui-palette-header,
+#red-ui-palette-container-input .red-ui-palette-header,
+#red-ui-palette-container-output .red-ui-palette-header,
+#red-ui-palette-container-function .red-ui-palette-header,
+#red-ui-palette-container-sequence .red-ui-palette-header,
+#red-ui-palette-container-network .red-ui-palette-header,
+#red-ui-palette-container-storage .red-ui-palette-header,
+#red-ui-palette-container-parser .red-ui-palette-header,
+#red-ui-palette-container-dashboard .red-ui-palette-header {
+    box-shadow: inset 3px 0 0 var(--palette-accent) !important;
+    color: var(--palette-accent) !important;
+    background: var(--rp-surface) !important;
+}
+
+#red-ui-palette-container-common .red-ui-palette-header span,
+#red-ui-palette-container-input .red-ui-palette-header span,
+#red-ui-palette-container-output .red-ui-palette-header span,
+#red-ui-palette-container-function .red-ui-palette-header span,
+#red-ui-palette-container-sequence .red-ui-palette-header span,
+#red-ui-palette-container-network .red-ui-palette-header span,
+#red-ui-palette-container-storage .red-ui-palette-header span,
+#red-ui-palette-container-parser .red-ui-palette-header span,
+#red-ui-palette-container-dashboard .red-ui-palette-header span {
+    color: var(--palette-accent) !important;
+}
+
+#red-ui-palette-container .red-ui-palette-node {
+    --palette-accent: var(--rp-iris);
+    background: var(--rp-overlay) !important;
+    background: color-mix(in srgb, var(--palette-accent) 13%, var(--rp-overlay)) !important;
+    border: 1px solid color-mix(in srgb, var(--palette-accent) 52%, var(--rp-muted)) !important;
+    border-radius: 6px !important;
+    box-shadow: inset 3px 0 0 var(--palette-accent), 0 2px 7px var(--rp-shadow-soft) !important;
+    transition: background 140ms ease, border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+#red-ui-palette-container .red-ui-palette-node:hover {
+    background: color-mix(in srgb, var(--palette-accent) 24%, var(--rp-overlay)) !important;
+    border-color: var(--palette-accent) !important;
+    box-shadow: inset 3px 0 0 var(--palette-accent), 0 0 0 1px var(--palette-accent), 0 5px 12px var(--rp-shadow-strong) !important;
+    transform: translateX(1px);
+}
+
+#red-ui-palette-container .red-ui-palette-node.selected {
+    border-color: var(--rp-rose) !important;
+    box-shadow: inset 3px 0 0 var(--palette-accent), 0 0 0 2px var(--rp-rose) !important;
+}
+
+#red-ui-palette-container .red-ui-palette-node .red-ui-palette-label,
+#red-ui-palette-container .red-ui-palette-node .red-ui-palette-node-label {
+    color: var(--rp-text) !important;
+    font-weight: 500;
+}
+
+#red-ui-palette-container .red-ui-palette-node .red-ui-palette-icon-container,
+#red-ui-palette-container .red-ui-palette-node .red-ui-palette-icon,
+#red-ui-palette-container .red-ui-palette-node .red-ui-palette-icon-container i,
+#red-ui-palette-container .red-ui-palette-node .red-ui-palette-icon-container svg,
+#red-ui-palette-container .red-ui-palette-node .red-ui-palette-icon-container path {
+    color: var(--palette-accent) !important;
+    fill: currentColor !important;
+}
+
+#red-ui-palette-container .red-ui-palette-node .red-ui-palette-port {
+    background-color: var(--palette-accent) !important;
+    border: 1px solid var(--rp-base) !important;
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--palette-accent) 55%, transparent) !important;
+}
+
+/* A few core nodes get distinct Rosé Pine accents instead of one flat blue. */
+#red-ui-palette-container-common [data-palette-type="inject"] { --palette-accent: var(--rp-foam); }
+#red-ui-palette-container-common [data-palette-type="debug"] { --palette-accent: var(--rp-iris); }
+#red-ui-palette-container-common [data-palette-type="complete"],
+#red-ui-palette-container-common [data-palette-type="status"] { --palette-accent: var(--rp-gold); }
+#red-ui-palette-container-common [data-palette-type="catch"] { --palette-accent: var(--rp-love); }
+#red-ui-palette-container-common [data-palette-type="link in"],
+#red-ui-palette-container-common [data-palette-type="link call"],
+#red-ui-palette-container-common [data-palette-type="link out"] { --palette-accent: var(--rp-pine); }
+#red-ui-palette-container-common [data-palette-type="comment"] { --palette-accent: var(--rp-rose); }
+
+#red-ui-palette-container-function [data-palette-type="function"],
+#red-ui-palette-container-function [data-palette-type="switch"],
+#red-ui-palette-container-function [data-palette-type="change"] { --palette-accent: var(--rp-iris); }
+#red-ui-palette-container-function [data-palette-type="range"],
+#red-ui-palette-container-function [data-palette-type="template"] { --palette-accent: var(--rp-rose); }
+#red-ui-palette-container-function [data-palette-type="delay"],
+#red-ui-palette-container-function [data-palette-type="trigger"] { --palette-accent: var(--rp-gold); }
+#red-ui-palette-container-function [data-palette-type="exec"] { --palette-accent: var(--rp-pine); }
+#red-ui-palette-container-function [data-palette-type="filter"] { --palette-accent: var(--rp-love); }
+
+#red-ui-palette-container-network [data-palette-type^="mqtt"] { --palette-accent: var(--rp-foam); }
+#red-ui-palette-container-network [data-palette-type^="http"] { --palette-accent: var(--rp-rose); }
+#red-ui-palette-container-network [data-palette-type^="tcp"],
+#red-ui-palette-container-network [data-palette-type^="udp"] { --palette-accent: var(--rp-gold); }
+
+/* Explorer/outliner polish: readable tree rows instead of inherited light-theme defaults. */
+.red-ui-info-outline,
+.red-ui-info-outline .red-ui-treeList,
+.red-ui-info-outline .red-ui-treeList-container,
+.red-ui-info-outline .red-ui-editableList-container,
+.red-ui-info-outline .red-ui-editableList-container li {
+    background: var(--rp-surface) !important;
+    color: var(--rp-text) !important;
+    border-color: var(--rp-overlay) !important;
+}
+
+.red-ui-info-outline .red-ui-info-toolbar,
+.red-ui-info-outline .red-ui-palette-search {
+    background: var(--rp-surface) !important;
+    border-bottom: 1px solid var(--rp-overlay) !important;
+}
+
+.red-ui-info-outline .red-ui-info-toolbar input,
+.red-ui-info-outline .red-ui-palette-search input {
+    background: var(--rp-overlay) !important;
+    color: var(--rp-text) !important;
+    border: 1px solid var(--rp-muted) !important;
+}
+
+.red-ui-info-outline .red-ui-treeList-label {
+    min-height: 28px;
+    box-sizing: border-box;
+    background: transparent !important;
+    color: var(--rp-subtle) !important;
+    border-left: 3px solid transparent;
+    transition: background 140ms ease, border-color 140ms ease, color 140ms ease;
+}
+
+.red-ui-info-outline .red-ui-treeList-label:hover,
+.red-ui-info-outline .red-ui-treeList-label:focus {
+    background: var(--rp-overlay) !important;
+    color: var(--rp-text) !important;
+    border-left-color: var(--rp-foam);
+}
+
+.red-ui-info-outline .red-ui-treeList-label.selected,
+.red-ui-info-outline .red-ui-treeList-label.selected .red-ui-treeList-sublabel-text {
+    background: var(--rp-selected) !important;
+    color: var(--rp-text) !important;
+    border-left-color: var(--rp-iris) !important;
+    box-shadow: inset 0 0 0 1px var(--rp-iris-line);
+}
+
+.red-ui-info-outline .red-ui-treeList-label .red-ui-treeList-label-text,
+.red-ui-info-outline .red-ui-treeList-label .red-ui-info-outline-item-label,
+.red-ui-info-outline .red-ui-treeList-label .red-ui-search-result-description,
+.red-ui-info-outline .red-ui-treeList-label .red-ui-search-result-description * {
+    color: inherit !important;
+}
+
+.red-ui-info-outline .red-ui-treeList-label .red-ui-treeList-icon,
+.red-ui-info-outline .red-ui-treeList-label .fa-angle-right,
+.red-ui-info-outline .red-ui-treeList-label .fa-angle-down {
+    color: var(--rp-subtle) !important;
+}
+
+.red-ui-info-outline .red-ui-treeList-label.selected .red-ui-treeList-icon,
+.red-ui-info-outline .red-ui-treeList-label.selected .fa-angle-right,
+.red-ui-info-outline .red-ui-treeList-label.selected .fa-angle-down {
+    color: var(--rp-foam) !important;
+}
+
+.red-ui-info-outline .red-ui-icons-flow {
+    opacity: 1 !important;
+    background-color: var(--rp-foam) !important;
+}
+
+.red-ui-info-outline .red-ui-info-outline-item-controls button {
+    background: var(--rp-overlay) !important;
+    border: 1px solid var(--rp-muted) !important;
+    color: var(--rp-subtle) !important;
+}
+
+.red-ui-info-outline .red-ui-info-outline-item-controls button:hover {
+    background: var(--rp-pine) !important;
+    border-color: var(--rp-foam) !important;
+    color: var(--rp-text) !important;
+}
+
+.red-ui-info-outline .red-ui-info-outline-item-controls button i {
+    color: inherit !important;
+}
+
+.red-ui-info-outline .red-ui-info-outline-item-empty {
+    color: var(--rp-subtle) !important;
+    opacity: 1 !important;
+    font-size: 12px !important;
+    font-style: italic;
+    letter-spacing: 0.02em;
+}
+
+/* Final readability pass for screenshots and normal use. */
+.red-ui-info-outline {
+    font-size: 14px !important;
+}
+
+.red-ui-info-outline .red-ui-treeList-label {
+    min-height: 32px;
+    padding: 5px 4px 5px 0 !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    color: var(--rp-text) !important;
+}
+
+.red-ui-info-outline .red-ui-treeList-label .red-ui-treeList-icon,
+.red-ui-info-outline .red-ui-treeList-label .fa-angle-right,
+.red-ui-info-outline .red-ui-treeList-label .fa-angle-down {
+    font-size: 14px !important;
+}
+
+.red-ui-info-outline .red-ui-info-outline-item-empty,
+.red-ui-info-outline .red-ui-info-outline-item-empty * {
+    color: var(--rp-subtle) !important;
+    opacity: 1 !important;
+}
+
+.red-ui-info-outline .red-ui-info-toolbar input,
+.red-ui-info-outline .red-ui-palette-search input {
+    height: 32px !important;
+    box-sizing: border-box;
+    font-size: 13px !important;
+    box-shadow: inset 0 0 0 1px var(--rp-foam-line);
+}
+
+.red-ui-info-outline .red-ui-info-outline-item-controls button {
+    min-width: 18px !important;
+    height: 20px !important;
+    border-radius: 5px !important;
+}
+
+.red-ui-info-outline .red-ui-treeList-label:not(:hover) .red-ui-info-outline-item-controls button {
+    background: transparent !important;
+    border-color: transparent !important;
+    color: var(--rp-muted) !important;
+}
+
+.red-ui-info-outline .red-ui-treeList-label:hover .red-ui-info-outline-item-controls button,
+.red-ui-info-outline .red-ui-treeList-label.selected:hover .red-ui-info-outline-item-controls button {
+    background: var(--rp-overlay) !important;
+    border-color: var(--rp-muted) !important;
+    color: var(--rp-foam) !important;
+}
+
+.red-ui-info-outline .red-ui-treeList-label.selected {
+    border-right: 1px solid var(--rp-iris-border);
+}

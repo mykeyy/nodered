@@ -1,0 +1,36 @@
+{
+  "name": "@mykeyy/node-red-theme-rose-pine",
+  "version": "1.0.0",
+  "description": "Rosé Pine Main, Moon, and Dawn themes for the Node-RED editor",
+  "main": "theme.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mykeyy/nodered.git"
+  },
+  "homepage": "https://github.com/mykeyy/nodered",
+  "keywords": [
+    "node-red",
+    "node-red-plugin",
+    "editor-theme",
+    "rose-pine",
+    "rose-pine-main",
+    "rose-pine-moon",
+    "rose-pine-dawn"
+  ],
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "style.css",
+    "style-moon.css",
+    "style-dawn.css",
+    "theme.js"
+  ],
+  "node-red": {
+    "plugins": {
+      "rose-pine": "theme.js"
+    }
+  }
+}
